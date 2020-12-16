@@ -19,6 +19,9 @@ RUN yarn install
 # Compile project
 RUN yarn compile
 
+# Prune `devDependencies`
+RUN npm prune --production
+
 # Tell the Docker engine the default port is 9736
 EXPOSE 9736
 
